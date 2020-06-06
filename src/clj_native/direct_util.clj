@@ -10,7 +10,8 @@
   (:import [clojure.asm Type]
            [java.nio ByteBuffer IntBuffer CharBuffer
             ShortBuffer LongBuffer FloatBuffer DoubleBuffer]
-           [com.sun.jna NativeLong Pointer WString]))
+           [com.sun.jna NativeLong Pointer WString]
+           [com.sun.jna.ptr ByteByReference]))
 
 ;;; ***************************************************************************
 ;;;
@@ -57,6 +58,7 @@
       'enum Integer/TYPE
       'BOOL Boolean/TYPE
       'bool Boolean/TYPE
+      'bool* ByteByReference
       'size_t native-long
       'long native-long
       'longlong Long/TYPE
